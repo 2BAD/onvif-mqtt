@@ -1,6 +1,6 @@
 {
   "name": "onvif-mqtt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "ONVIF camera events, snapshots and stream URLs in Home Assistant over MQTT",
   "homepage": "https://github.com/2BAD/onvif-mqtt#readme",

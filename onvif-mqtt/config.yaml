@@ -1,5 +1,5 @@
 name: ONVIF MQTT
-version: 0.1.0
+version: 0.1.1
 slug: onvif_mqtt
 description: ONVIF camera events, snapshots and stream URLs over MQTT
 url: https://github.com/2BAD/onvif-mqtt
