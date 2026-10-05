@@ -1,0 +1,27 @@
+name: ONVIF MQTT
+version: 0.1.0
+slug: onvif_mqtt
+description: ONVIF camera events, snapshots and stream URLs over MQTT
+url: https://github.com/2BAD/onvif-mqtt
+image: ghcr.io/2bad/onvif-mqtt
+arch:
+  - amd64
+  - aarch64
+services:
+  - mqtt:want
+options:
+  snapshot_interval: 10
+  cameras: []
+schema:
+  mqtt_url: str?
+  mqtt_username: str?
+  mqtt_password: password?
+  base_topic: str?
+  discovery_prefix: str?
+  snapshot_interval: int(0,86400)
+  cameras:
+    - name: str?
+      host: str
+      port: port?
+      username: str?
+      password: password?

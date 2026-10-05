@@ -1,0 +1,8 @@
+.git
+.github
+coverage
+node_modules
+onvif-mqtt
+**/*.test.ts
+*.md
+.env

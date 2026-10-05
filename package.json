@@ -1,0 +1,61 @@
+{
+  "name": "onvif-mqtt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ONVIF camera events, snapshots and stream URLs in Home Assistant over MQTT",
+  "homepage": "https://github.com/2BAD/onvif-mqtt#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/onvif-mqtt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2BAD/onvif-mqtt.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "scripts": {
+    "check": "run-p check:**",
+    "check:code": "oxlint ./source",
+    "check:format": "oxfmt --check ./source",
+    "check:types": "tsc --noEmit",
+    "fix": "run-p fix:**",
+    "fix:code": "oxlint --fix ./source",
+    "fix:format": "oxfmt ./source",
+    "start": "node source/index.ts",
+    "test": "vitest run",
+    "test:unit": "vitest run unit --coverage"
+  },
+  "dependencies": {
+    "@2bad/onvif": "2.0.0",
+    "@2bad/onvif-events": "2.0.0",
+    "@2bad/onvif-media": "2.0.0",
+    "mqtt": "5.16.0"
+  },
+  "devDependencies": {
+    "@2bad/axiom": "2.1.0",
+    "@2bad/tsconfig": "4.0.0",
+    "@types/node": "26.6.4",
+    "@vitest/coverage-v8": "5.0.3",
+    "npm-run-all2": "9.0.3",
+    "oxfmt": "0.71.0",
+    "oxlint": "1.86.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3"
+  },
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=26"
+  },
+  "volta": {
+    "node": "26.10.0",
+    "pnpm": "12.6.0"
+  }
+}
